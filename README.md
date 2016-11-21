@@ -1,7 +1,7 @@
 #Teoría de las comunicaciones
 ## Complejidad y Computabilidad
-
-#Integrantes
+Proyecto de entropía y códigos de Huffman.
+##Integrantes
 
 Fajardo Oroz Angel Farid
 
@@ -9,7 +9,7 @@ Martínez Santana Walter
 
 Urteaga Reyesvera J. Carlos
 
-Proyecto de entropía y códigos de Huffman.
+
 ###Entropía
     $ javac Entropia.java
 
