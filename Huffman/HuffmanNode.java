@@ -1,4 +1,3 @@
-package org.dk.huffman;
 
 /**
  * This is a class representing a single node

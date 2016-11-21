@@ -1,5 +1,3 @@
-package org.dk.huffman;
-
 
 class HuffmanConsts {
 	public final static int DEFAULT_SEGMENT_SIZE_KB = 200;

@@ -6,14 +6,14 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.text.DecimalFormat;
 
-class entropy {
+class Entropia {
     public static void main(String[] args) {
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	String filepath=null;
 
 	try {
-	 System.out.print("Enter path of file to calculate entropy of: ");
+	 System.out.print("Ingrese la ruta del archivo: ");
          filepath = br.readLine();
       	} catch (IOException ioe) {
          System.out.println("IO error trying to read filepath!");
@@ -91,8 +91,8 @@ class entropy {
 
 	    // output the entropy calculated
 	    DecimalFormat df = new DecimalFormat("##.#####");
-	    System.out.println("Entropy is: " + df.format(entropy) + " bits per byte");
-        System.out.println("Entropy is: " + df.format(entropyNibble) + " bits per nibble");
+        System.out.println("Entropia es: " + df.format(entropy) + " bits por byte");
+        System.out.println("Entropia es: " + df.format(entropyNibble) + " bits por nibble");
         }
 
         catch (FileNotFoundException e) {

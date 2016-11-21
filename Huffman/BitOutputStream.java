@@ -1,4 +1,3 @@
-package org.dk.huffman;
 
 import java.io.IOException;
 import java.io.OutputStream;

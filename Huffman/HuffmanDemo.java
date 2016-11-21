@@ -1,4 +1,3 @@
-package org.dk.huffman;
 
 import java.io.*;
 
@@ -12,8 +11,6 @@ public class HuffmanDemo {
 				doEncode(args);
 			else if (args[0].equals("dec"))
 				doDeocde(args);
-			else if (args[0].equals("entropy"))
-				calcEntropy(args);
 			else
 				usage();
 		} catch (FileNotFoundException err) {
@@ -42,16 +39,16 @@ public class HuffmanDemo {
 		in.close();
 		hout.close();
 
-		System.out.println("Compression: done");
-		System.out.println("Original file size:     " + inFile.length());
-		System.out.println("Compressed file size:   " + outFile.length());
-		System.out.print("Compression efficiency: ");
+		System.out.println("Compresión: Lista");
+		System.out.println("Tamaño inicial:     " + inFile.length());
+		System.out.println("Tamaño final:   " + outFile.length());
+		System.out.print("Eficiencia de Compresion: ");
 		if (inFile.length() > outFile.length()) {
 			System.out.format("%.2f%%\n",
 				(100.0 - (((double) outFile.length() / (double) inFile.length()) * 100)));
 		}
 		else
-			System.out.println("none");
+			System.out.println("ninguna");
 	}
 
 	public static void doDeocde(String[] args) throws IOException {
@@ -71,38 +68,22 @@ public class HuffmanDemo {
 
 		hin.close();
 		out.close();
-		System.out.println("Decompression: done");
-		System.out.println("Original file size:     " + inFile.length());
-		System.out.println("Decompressed file size: " + outFile.length());
+		System.out.println("Desompresión: Lista");
+		System.out.println("Tamaño inicial:     " + inFile.length());
+		System.out.println("Tamaño final: " + outFile.length());
 	}
 
-	public static void calcEntropy(String[] args) throws IOException {
-		if (args.length < 2)
-			usage();
-
-		InputStream in = new FileInputStream(args[1]);
-		HFreqTable ftbl = new HFreqTable();
-		int sym;
-
-		while ((sym = in.read()) != -1)
-			ftbl.add(sym);
-
-		in.close();
-		System.out.format("Entropy: %.2f\n", ftbl.entropy());
-	}
 
 	public static void usage() {
-		System.err.println("USAGE: HuffmanDemo enc|dec|entropy");
+		System.err.println("Uso: HuffmanDemo enc|dec");
 		System.err.println("       enc <input-file> <output-file>: " +
-				"encode input file and save");
+				"");
 		System.err.println("                        " +
-				"the results to output file");
+				"Error con el archivo de salida");
 		System.err.println("       dec <input-file> <output-file>: " +
 				"decode input file and save");
 		System.err.println("                        " +
-				"the results to output file");
-		System.err.println("       entropy <input-file>: calculate an " +
-				"entropy of the symbols in input file");
+				"Error con el archivo de salida");
 		System.exit(1);
 	}
 }

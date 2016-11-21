@@ -1,5 +1,3 @@
-package org.dk.huffman;
-
 import java.io.*;
 
 /**

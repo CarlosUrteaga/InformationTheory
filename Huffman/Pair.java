@@ -1,4 +1,3 @@
-package org.dk.huffman;
 
 public final class Pair<TypeOne, TypeTwo> {
 	protected final TypeOne first;
