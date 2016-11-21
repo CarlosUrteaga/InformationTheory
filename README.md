@@ -4,7 +4,9 @@
 #Integrantes
 
 Fajardo Oroz Angel Farid
+
 Martínez Santana Walter
+
 Urteaga Reyesvera J. Carlos
 
 Proyecto de entropía y códigos de Huffman.
