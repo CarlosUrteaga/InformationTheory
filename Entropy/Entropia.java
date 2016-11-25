@@ -38,15 +38,20 @@ class Entropia {
 
 	    // count frequency of occuring bytes
         for(int i=0; i<fileContentLength; i++) {
-		byte byteValue=fileContent[i];
-		frequency_array[byteValue]++;
+        byte byteValue=fileContent[i];
+        int ia = byteValue;
+        if (ia>0) {
+             
 
+            frequency_array[byteValue]++;
         //int val = byteValue;
         //nibble
-        int lo = byteValue & 0xF;//mask
-        int hi = byteValue >> 4;//corrimiento
-        frequency_arrayNible[lo]++;
-        frequency_arrayNible[hi]++;
+            int lo = byteValue & 0xF;//mask
+            int hi = byteValue >> 4;//corrimiento
+            frequency_arrayNible[lo]++;
+            frequency_arrayNible[hi]++;
+        }
+           
 
         
 	    }

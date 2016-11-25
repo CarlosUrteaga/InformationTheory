@@ -1,3 +1,5 @@
 *.class
 Entropy/*.class
 Huffman/*.class
+Entropy/*.pdf
+Huffman/*.pdf
